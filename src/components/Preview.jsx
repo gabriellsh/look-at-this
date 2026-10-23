@@ -9,7 +9,8 @@ export default function Preview({ demo, live = false }) {
         src={demo.url}
         title={`${demo.title} preview`}
         loading="lazy"
-        sandbox="allow-scripts allow-same-origin"
+        sandbox="allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"
+        allow="camera; fullscreen"
       />
     );
   }

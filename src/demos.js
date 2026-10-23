@@ -16,6 +16,15 @@ export const GITHUB_USER = 'gabriellsh';
 
 export const demos = [
   {
+    id: 'background-blur-lab',
+    title: 'Background Blur Lab',
+    description: 'Meet-style background blur and replacement with MediaPipe’s selfie segmenter. Runs entirely in your browser; frames never leave the device.',
+    url: './demos/background-blur-lab/',
+    embed: true,
+    tags: ['ml', 'camera', 'canvas'],
+    year: 2026,
+  },
+  {
     id: 'sample-orbit',
     title: 'Orbit',
     description: 'Placeholder demo. Replace me with something you built — a tiny physics toy, maybe.',
@@ -29,15 +38,6 @@ export const demos = [
     description: 'Placeholder demo. Pull dominant colors out of any image, right in the browser.',
     url: 'https://github.com/gabriellsh',
     tags: ['sample', 'tool'],
-    year: 2026,
-  },
-  {
-    id: 'sample-wiki',
-    title: 'Embedded preview',
-    description: 'Placeholder showing a live iframe preview. Set `embed: true` on demos that allow framing.',
-    url: 'https://example.com',
-    embed: true,
-    tags: ['sample', 'embed'],
     year: 2026,
   },
   {
