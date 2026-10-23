@@ -40,9 +40,13 @@ export function createCompositor(out) {
     const scale = Math.min(1, MAX_OUTPUT_WIDTH / w);
     const W = Math.round(w * scale);
     const H = Math.round(h * scale);
-    if (out.width !== W || out.height !== H) {
-      out.width = fg.width = W;
-      out.height = fg.height = H;
+    // Check each canvas on its own: the output starts at 1280×720, so a 1280×720 camera would
+    // otherwise leave the foreground canvas at its default 300×150.
+    for (const c of [out, fg]) {
+      if (c.width !== W || c.height !== H) {
+        c.width = W;
+        c.height = H;
+      }
     }
     return true;
   }
